@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<header>
+  <style>
+body {
+  color: #676464;
+  background-color: #fff;
+}
+
+header {
+  background-color: #676464;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+section.about {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.restaurant-img {
+  display: block;
+  margin: 20px auto;
+}
+
+h2, h3 {
+  color: #676464;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  margin: 10px;
+}
+
+.team-member img {
+  border-radius: 50%;
+  max-width: 100px;
+}
+
+.team-member h4 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: #676464;
+}
+
+.team-member p {
+  margin: 0;
+  font-size: 1em;
+  color: #676464;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+}
+
+.testimonials {
+  margin-top: 20px;
+}
+
+blockquote {
+  background-color: #f9f9f9;
+  border-left: 10px solid #676464;
+  margin: 20px 0;
+  padding: 10px 20px;
+  quotes: "“" "”" "'" "'";
+}
+
+blockquote:before {
+  content: open-quote;
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 10px;
+  vertical-align: -0.4em;
+  color: #676464;
+}
+
+blockquote cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #676464;
+}
+
+footer {
+  background-color: #676464;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Additional Centering */
+header, footer, main, section.about, .testimonials {
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .team {
+      flex-direction: column;
+  }
+
+  .team-member {
+      margin: 20px 0;
+  }
+
+  .restaurant-img {
+      width: 80%;
+  }
+}
+  </style>
+</header>
+<main>
+  <center>
+  <section class="about">
+      <img src="{% static 'img/restaurant.webp' %}" alt="Restaurant Image" class="restaurant-img" width="40%">
+
+      <h2>About Us</h2>
+      <p>Welcome to Covai Kebab, where we offer a delightful culinary experience. Established in 2019, our restaurant has been serving delectable dishes crafted from the freshest ingredients.</p>
+      
+      <h3>Our History</h3>
+      <p>Covai kebab was founded by Chef John Doe, a culinary visionary with over 20 years of experience in the industry. Starting as a small family-owned restaurant, we have grown to become a beloved dining destination known for our innovation and quality.</p>
+      
+      <h3>Our Mission</h3>
+      <p>Our mission is to provide exceptional dining experiences with a focus on quality, creativity, and sustainability. We strive to create a warm and welcoming atmosphere for all our guests.</p>
+      
+      <h3>Meet Our Team</h3>
+      <div class="team">
+          <div class="team-member">
+              <img src="{% static 'img/Damu.jpg' %}">
+              <h4>Chef Dhamu</h4>
+              <p>Head Chef & Founder</p>
+          </div>
+          <div class="team-member">
+              <img src="{% static 'img/vb.webp' %}">
+              <h4>Chef Venkatesh Bhatt</h4>
+              <p>Restaurant Manager</p>
+          </div>
+          <div class="team-member">
+            <img src="{% static 'img/mr.jpg' %}">
+              <h4>Chef Madhampatti Rangaraj</h4>
+              <p>Assistant chef</p>
+          </div>
+      </div>
+      
+      <h3>Our Specialties</h3>
+      <ul>
+          <li>Masala Dosa</li><br>
+          <li>Leaf Parotta</li><br>
+          <li>Mutton Briyani</li><br>
+          <li>Chicken Varities</li><br>
+          <li>Desserts</li><br>
+      </ul>
+      
+      <h3>Testimonials</h3>
+      <div class="testimonials">
+          <blockquote>
+              "The best dining experience I've ever had! The food was exquisite and the service was top-notch."
+              <cite>— Emily R.</cite>
+          </blockquote>
+          <blockquote>
+              "A true gem in the city. The ambiance, the dishes, and the staff all exceeded my expectations."
+              <cite>— Michael S.</cite>
+          </blockquote>
+      </div>
+  </section>
+</center>
+</main><br><br>
+<footer><br>
+  <center>
+  <p>&copy; 2024 Covai Kebab. All Rights Reserved.</p>
+</center>
+</footer>
+</center>
+
+{% endblock %}
